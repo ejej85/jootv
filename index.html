@@ -8,6 +8,21 @@
 </head>
 <body>
   <main class="app">
+    <section class="player-wrap">
+      <video
+        id="video"
+        controls
+        playsinline
+        webkit-playsinline
+        preload="metadata"
+      ></video>
+
+      <div class="player-meta">
+        <strong id="nowPlaying">재생할 채널을 선택하세요</strong>
+        <p id="status">m3u 또는 m3u8 파일을 선택하세요.</p>
+      </div>
+    </section>
+
     <header class="topbar">
       <h1>IPTV Player</h1>
       <label class="file-btn">
@@ -16,15 +31,12 @@
       </label>
     </header>
 
-    <section class="status-wrap">
-      <p id="status">m3u 또는 m3u8 파일을 선택하세요.</p>
-    </section>
-
     <section class="list-wrap">
       <ul id="channelList"></ul>
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script src="script.js"></script>
 </body>
 </html>
