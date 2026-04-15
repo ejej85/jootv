@@ -8,28 +8,35 @@
 </head>
 <body>
   <main class="app">
-    <section class="player-wrap">
-      <video
-        id="video"
-        controls
-        playsinline
-        webkit-playsinline
-        preload="metadata"
-      ></video>
+    <section class="player-wrap" id="playerWrap">
+  <video
+    id="video"
+    controls
+    playsinline
+    webkit-playsinline
+    preload="metadata"
+  ></video>
 
-      <div class="player-meta">
-        <strong id="nowPlaying">재생할 채널을 선택하세요</strong>
-        <p id="status">m3u 또는 m3u8 파일을 선택하세요.</p>
-      </div>
-    </section>
+  <div class="player-meta">
+    <div class="meta-text">
+      <strong id="nowPlaying">재생할 채널을 선택하세요</strong>
+      <p id="status">m3u 또는 m3u8 파일을 선택하세요.</p>
+    </div>
 
-    <header class="topbar">
-      <h1>IPTV Player</h1>
-      <label class="file-btn">
-        재생목록 불러오기
-        <input type="file" id="playlistFile" accept=".m3u,.m3u8" hidden />
-      </label>
-    </header>
+    <div class="meta-actions">
+      <button id="fullscreenBtn" type="button">전체화면</button>
+      <button id="toggleListBtn" type="button">채널목록</button>
+    </div>
+  </div>
+</section>
+
+<header class="topbar" id="topbar">
+  <h1>IPTV Player</h1>
+  <label class="file-btn">
+    재생목록 불러오기
+    <input type="file" id="playlistFile" accept=".m3u,.m3u8" hidden />
+  </label>
+</header>
 
     <section class="list-wrap">
       <ul id="channelList"></ul>
